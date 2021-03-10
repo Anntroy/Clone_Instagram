@@ -1,0 +1,44 @@
+@use '../abstracts/extends';
+@use '../abstracts/variables' as v;
+
+.header {
+  @extend %flex-row;
+  width: 100vw;
+  border: v.$color-grey 1px solid;
+  padding: 1.5rem;
+  background-color: v.$white;
+
+  &__item1 {
+  @extend %flex-row;
+  justify-content: start;
+  width: 55vw;
+
+    &-logo {
+      margin-left: 20vw;
+    }
+
+    &-search {
+      margin-left: auto;
+
+      &-button {
+        width: 22rem;
+        height: 3rem;
+        background-color: v.$color-grey-background;
+        border: 1px solid v.$color-grey;
+        border-radius: 2px;
+
+        & span {
+          margin-left: 1rem;
+        }
+      }
+    }
+  }
+  &__item2 {
+    width: 22vw;
+    margin-left: 22rem;
+
+    & i {
+      padding-right: 2rem;
+    }
+  }
+}

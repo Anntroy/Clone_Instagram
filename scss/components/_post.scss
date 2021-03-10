@@ -1,0 +1,61 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/extends';
+
+
+.post {
+  @extend %flex-column;
+  width: 40vw;
+  margin: 2rem 0 2rem 21vw;
+  border: solid 1px v.$color-grey;
+  background-color: v.$white;
+  align-items: start;
+
+  &__item1 {
+    @extend %flex-row;
+    margin: 1rem;
+
+    &-avatar {
+      width: 3.5rem;
+      height: 3.5rem;
+      border-radius: 50%;
+      margin-right: 1.5rem;
+      @extend %image;
+      background-image: url('../../assets/img/heart-of-veg.jpg');
+    }
+
+    &-username {
+      margin-right: auto;
+    }
+  }
+
+  &__item2 {
+    width: 100%;
+    height: 54rem;
+    @extend %image;
+    background-image: url('../../assets/img/3.jpg');
+  }
+
+  &__item3 {
+    margin: 1rem;
+
+    & .fa-heart {
+      margin-right: 1rem;
+      color: v.$color-red;
+    }
+
+  }
+
+  &__item4 {
+    @extend .post__item3;
+    margin-top: 0;
+
+    &-likes{
+      margin-bottom: 1rem;
+    }
+
+    &-comment{
+      @extend .post__item4-likes;
+    }
+  }
+
+}

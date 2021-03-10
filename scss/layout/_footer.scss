@@ -1,0 +1,22 @@
+@use '../abstracts/extends';
+
+.footer {
+  @extend %flex-column;
+
+  &__nav {
+    @extend %flex-row;
+    justify-content: center;
+
+
+    & li {
+      list-style-type: none;
+      padding: 0.5rem;
+    }
+  }
+
+  &__language {
+    margin-right: 2rem;
+    border: none;
+    outline: none;
+  }
+}
