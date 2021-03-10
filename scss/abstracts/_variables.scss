@@ -1,12 +1,17 @@
 // FONTS
 
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Oswald&family=Pacifico&family=Roboto:wght@300&display=swap');
-
-$font-logo: 'Great Vibes', cursive; //400
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+$font-logo: 'Courgette', cursive; //400
 $font-title: 'Pasifico', cursive; //400
 $font-primary: 'Oswald', sans-serif; //300, 400, 600
 $font-secundary: 'Roboto', sans-serif; //300, 400, 500, 700
 
 //COLORS
 
-$color-blue-1: #0eb2e9;
+$color-blue-1: #04a8df;
+$color-grey: rgb(165, 162, 162);
+$color-grey-background: rgb(251, 255, 255);
+
+$black: rgba(0, 0, 0, 1.0);
+$white: rgba(255, 255, 255, 1.0);
