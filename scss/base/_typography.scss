@@ -1,21 +1,39 @@
+@use '../abstracts/variables' as v;
+
 // Logo text
 
-.logogo-text {
-  font-family: $font-logo;
-  color: $black;
+.logo-text {
+  font-family: v.$font-logo;
+  color: v.$black;
+  font-size: 2.4rem;
 }
 
 // Ordinary text
 
 .body-text {
-  font-family: $font-secundary;
-  color: $black;
+  font-family: v.$font-secundary;
+  color: v.$black;
 
   &--light {
     font-weight: 300;
+    font-size: 1.2rem;
+    font-family: v.$font-primary;
   }
 
   &--bold {
-    font-weight: 700;
+    font-weight: 600;
+    font-size: 1.3rem;
+  }
+
+  &--blue {
+    color: v.$color-blue-1;
+    font-weight: 600;
+    font-size: 1.3rem;
+  }
+
+  &--white {
+    color: v.$white;
+    font-weight: 600;
+    font-size: 1.3rem;
   }
 }

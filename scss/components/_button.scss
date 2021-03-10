@@ -1,0 +1,13 @@
+@use '../abstracts/variables' as v;
+
+%button {
+  background-color: v.$color-blue-1;
+  border: none;
+  cursor: pointer;
+  display: block;
+  padding: 9px;
+  text-align: center;
+  border-radius: 4px;
+  max-width: 100%;
+  min-width: 120px;
+}

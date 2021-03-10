@@ -1,0 +1,99 @@
+@use '../abstracts/extends';
+@use '../components/button';
+@use '../abstracts/variables' as v;
+
+
+
+.container {
+  @extend %flex-row;
+  margin-top: 4rem;
+  justify-content: center;
+
+  .phone{
+    width: 40rem;
+    height: 60rem;
+    background-image: url('../../assets/img/home_phone_full.png');
+    @extend %image;
+  }
+
+  .login {
+    @extend %flex-column;
+    padding: 4rem;
+
+
+    &__item1 {
+      @extend %flex-column;
+      border: 1px solid v.$color-grey;
+      width: 35rem;
+      height: 30rem;
+      background-color: v.$white;
+
+      &-logo {
+        margin-top: 3rem;
+      }
+
+      &-figure {
+        width: 80px;
+        height: 80px;
+        margin: 2.8rem 0 2rem 0;
+        border-radius: 50%;
+        background-image: url('../../assets/img/heart-of-veg.jpg');
+        @extend %image;
+      }
+
+      &-continue {
+        margin-top: 1rem;
+
+        &-button {
+          @extend %button;
+
+          & a {
+            text-decoration: none;
+            color: v.$white;
+          }
+        }
+      }
+
+      &-remove {
+        margin-top: 1.5rem;
+      }
+    }
+    &__item2 {
+      @extend .login__item1;
+      height: 8rem;
+      margin-top: 1rem;
+      justify-content: center;
+
+      &-switch {
+        margin-top: 0.6rem;
+
+        & span {
+          color: v.$black;
+        }
+      }
+    }
+    &__item3 {
+
+      &-get {
+        margin: 2rem;
+      }
+    }
+    &__item4 {
+      display: flex;
+
+      &-app {
+        width: 13.6rem;
+        height: 4rem;
+        background-image: url('../../assets/img/app_store.png');
+        @extend %image;
+      }
+
+      &-play {
+        width: 13.6rem;
+        height: 4rem;
+        background-image: url('../../assets/img/google_play.png');
+        @extend %image;
+      }
+    }
+  }
+}

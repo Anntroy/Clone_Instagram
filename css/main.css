@@ -11,26 +11,10 @@
 html {
   font-size: 62.5%;
 }
-@media only screen and (max-width: 75em) {
-  html {
-    font-size: 56.25%;
-  }
-}
-@media only screen and (max-width: 56.25em) {
-  html {
-    font-size: 50%;
-  }
-}
 
 body {
   box-sizing: border-box;
-  background-color: #fbffff;
-}
-
-.container {
-  display: grid;
-  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(2, minmax(min-content, 60rem)) [center-end] minmax(6rem, 1fr) [full-end];
-  grid-template-rows: 100vh min-content;
+  background-color: #f7ffff;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -382,9 +366,10 @@ template {
   display: none;
 }
 
-.logogo-text {
+.logo-text {
   font-family: "Courgette", cursive;
   color: black;
+  font-size: 2.4rem;
 }
 
 .body-text {
@@ -393,9 +378,22 @@ template {
 }
 .body-text--light {
   font-weight: 300;
+  font-size: 1.2rem;
+  font-family: "Oswald", sans-serif;
 }
 .body-text--bold {
-  font-weight: 700;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+.body-text--blue {
+  color: #088fbd;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+.body-text--white {
+  color: white;
+  font-weight: 600;
+  font-size: 1.3rem;
 }
 
 .u-mb-small {
@@ -414,74 +412,185 @@ template {
   text-align: center;
 }
 
-.phone__figure {
-  width: 400px;
-  height: 600px;
-  background-image: url("../../assets/img/phones.png");
+.post__item1, .container, .header, .header__item1, .footer__nav {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.post, .container .login, .container .login__item1, .container .login__item2, .footer {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.post__item1-avatar, .post__item2, .container .phone, .container .login__item1-figure, .container .login__item4-app, .container .login__item4-play {
   background-position: center center;
   background-repeat: no-repeat;
-  border: 1px solid #a5a2a2;
 }
 
-.flex {
-  display: flex;
-  align-items: center;
+.footer__nav {
   justify-content: center;
-  margin-top: 4rem;
+}
+.footer__nav li {
+  list-style-type: none;
+  padding: 0.5rem;
+}
+.footer__language {
+  margin-right: 2rem;
+  border: none;
+  outline: none;
 }
 
-.login {
-  width: 400px;
-  height: 600px;
-  border: 1px solid #a5a2a2;
-  padding: 4rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.login__item1 {
-  width: 350px;
-  height: 300px;
-  border: 1px solid #a5a2a2;
-  border-radius: 1px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+.header {
+  width: 100vw;
+  border: #d8d7d7 1px solid;
+  padding: 1.5rem;
   background-color: white;
 }
-
-.login__logo {
-  font-family: "Courgette", cursive;
-  font-size: 2.4rem;
-  margin-top: 2rem;
+.header__item1 {
+  justify-content: start;
+  width: 55vw;
+}
+.header__item1-logo {
+  margin-left: 20vw;
+}
+.header__item1-search {
+  margin-left: auto;
+}
+.header__item1-search-button {
+  width: 22rem;
+  height: 3rem;
+  background-color: #f7ffff;
+  border: 1px solid #d8d7d7;
+  border-radius: 2px;
+}
+.header__item1-search-button span {
+  margin-left: 1rem;
+}
+.header__item2 {
+  width: 22vw;
+  margin-left: 22rem;
+}
+.header__item2 i {
+  padding-right: 2rem;
 }
 
-.login__figure {
-  width: 90px;
-  height: 90px;
+.container .login__item1-continue-button {
+  background-color: #088fbd;
+  border: none;
+  cursor: pointer;
+  display: block;
+  padding: 9px;
+  text-align: center;
+  border-radius: 4px;
+  max-width: 100%;
+  min-width: 120px;
+}
+
+.container {
+  margin-top: 4rem;
+  justify-content: center;
+}
+.container .phone {
+  width: 40rem;
+  height: 60rem;
+  background-image: url("../../assets/img/home_phone_full.png");
+}
+.container .login {
+  padding: 4rem;
+}
+.container .login__item1, .container .login__item2 {
+  border: 1px solid #d8d7d7;
+  width: 35rem;
+  height: 30rem;
+  background-color: white;
+}
+.container .login__item1-logo {
+  margin-top: 3rem;
+}
+.container .login__item1-figure {
+  width: 80px;
+  height: 80px;
+  margin: 2.8rem 0 2rem 0;
   border-radius: 50%;
   background-image: url("../../assets/img/heart-of-veg.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
 }
-
-.login__button {
-  background-color: #04a8df;
-  padding: 10px 3px;
-  width: 180px;
-  border-radius: 3px;
-  border: none;
-  font-size: 1.4rem;
+.container .login__item1-continue {
+  margin-top: 1rem;
+}
+.container .login__item1-continue-button a {
+  text-decoration: none;
   color: white;
-  font-weight: 600;
-  font-family: "Roboto", sans-serif;
+}
+.container .login__item1-remove {
+  margin-top: 1.5rem;
+}
+.container .login__item2 {
+  height: 8rem;
+  margin-top: 1rem;
+  justify-content: center;
+}
+.container .login__item2-switch {
+  margin-top: 0.6rem;
+}
+.container .login__item2-switch span {
+  color: black;
+}
+.container .login__item3-get {
+  margin: 2rem;
+}
+.container .login__item4 {
+  display: flex;
+}
+.container .login__item4-app {
+  width: 13.6rem;
+  height: 4rem;
+  background-image: url("../../assets/img/app_store.png");
+}
+.container .login__item4-play {
+  width: 13.6rem;
+  height: 4rem;
+  background-image: url("../../assets/img/google_play.png");
 }
 
-.login__remove {
-  color: #04a8df;
-  font-family: "Roboto", sans-serif;
+.post {
+  width: 40vw;
+  margin: 2rem 0 2rem 21vw;
+  border: solid 1px #d8d7d7;
+  background-color: white;
+  align-items: start;
+}
+.post__item1 {
+  margin: 1rem;
+}
+.post__item1-avatar {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  margin-right: 1.5rem;
+  background-image: url("../../assets/img/heart-of-veg.jpg");
+}
+.post__item1-username {
+  margin-right: auto;
+}
+.post__item2 {
+  width: 100%;
+  height: 54rem;
+  background-image: url("../../assets/img/3.jpg");
+}
+.post__item3, .post__item4 {
+  margin: 1rem;
+}
+.post__item3 .fa-heart, .post__item4 .fa-heart {
+  margin-right: 1rem;
+  color: #ce4a4a;
+}
+.post__item4 {
+  margin-top: 0;
+}
+.post__item4-likes, .post__item4-comment {
+  margin-bottom: 1rem;
 }
 
 /*# sourceMappingURL=main.css.map */
