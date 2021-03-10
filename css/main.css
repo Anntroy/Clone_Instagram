@@ -1,0 +1,20 @@
+/* Error: Undefined mixin.
+ *    ,
+ * 12 | /   @include respond($breackpoint: 'tab-land') {
+ * 13 | |     font-size: 56.25%;
+ * 14 | \   }
+ *    '
+ *   scss/base/_base.scss 12:3  @forward
+ *   scss/base/_index.scss 1:1  @use
+ *   scss/main.scss 2:1         root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined mixin.\a    \2577 \a 12 \2502  \250c    @include respond($breackpoint: 'tab-land') {\a 13 \2502  \2502      font-size: 56.25%;\a 14 \2502  \2514    }\a    \2575 \a   scss/base/_base.scss 12:3  @forward\a   scss/base/_index.scss 1:1  @use\a   scss/main.scss 2:1         root stylesheet";
+}

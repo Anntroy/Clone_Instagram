@@ -1,0 +1,21 @@
+/ Logo text
+
+.logogo-text {
+  font-family: $font-logo;
+  color: $black;
+}
+
+// Ordinary text
+
+.body-text {
+  font-family: $font-secundary;
+  color: $black;
+
+  &--light {
+    font-weight: 300;
+  }
+
+  &--bold {
+    font-weight: 700;
+  }
+}
