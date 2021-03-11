@@ -89,10 +89,9 @@
       }
 
       &-play {
-        width: 13.6rem;
-        height: 4rem;
+        @extend .login__item4-app;
         background-image: url('../../assets/img/google_play.png');
-        @extend %image;
+        margin-left: 1.5rem;
       }
     }
   }
