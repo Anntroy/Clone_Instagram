@@ -1,6 +1,6 @@
 # Clone_Instagram
 
-This project just do the mock copy of the login and main page of instagram using SASS.
+This project is just a mock copy of the login and main page of instagram using SASS.
 
 Theoretical part
 The following questions will be answered with my own words to check the understanding of the main SASS concepts:
